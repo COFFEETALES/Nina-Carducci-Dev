@@ -146,17 +146,17 @@
         });
       }
       let index = 0,
-        next = null;
+        previous = null;
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+          index = i - 1;
         }
       });
-      next =
+      previous =
         imagesCollection[index] ||
         imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      $(".lightboxImage").attr("src", $(previous).attr("src"));
     },
     nextImage() {
       let activeImage = null;
@@ -189,7 +189,7 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          index = i + 1;
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
@@ -241,6 +241,7 @@
       }
       $(".active-tag").removeClass("active active-tag");
       $(this).addClass("active-tag");
+      $(this).addClass("active");
 
       var tag = $(this).data("images-toggle");
 
