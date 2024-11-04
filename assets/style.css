@@ -38,6 +38,9 @@ body {
 	color: #000
 }
 
+.social-link {
+	font-size: 0;
+}
 .social-link img {
 	width: 20px;
 }
@@ -67,9 +70,11 @@ body {
 	z-index: 0;
 }
 
+.carousel-item img,
 .picture img {
 	width: 100%;
-
+	height: auto;
+	object-fit: cover;
 }
 #about-me {
 	flex: 2

@@ -2,16 +2,15 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="./assets/style.min.css"/>
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" media="all"/>
+	<link rel="stylesheet" href="./assets/style.min.css" media="all"/>
 	<link rel="preconnect" href="https://fonts.googleapis.com"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-	<link href="https://fonts.googleapis.com/css2?family=Inter&amp;family=Spectral:ital,wght@0,400;1,300;1,400;1,800&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Inter&amp;family=Spectral:ital,wght@0,400;1,300;1,400;1,800&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload = null"/>
 	<meta charset="UTF-8"/>
-	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.min.js"></script>
-	<script src="./assets/scripts.min.js"></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer=""></script>
+	<script src="./assets/maugallery.min.js" defer=""></script>
+	<script src="./assets/scripts.min.js" defer=""></script>
 </head>
 <body>
 <div class="top-header">
@@ -22,7 +21,7 @@
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt=""/></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.min.webp" alt="" width="20" height="20"/></a></li>
 		</ul>
 	</div>
 </div>
@@ -36,13 +35,52 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100" alt="..."/>
+				<picture>
+					<source srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.480.min.webp"
+						media="(max-width: 480px)"/>
+					<source srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.768.min.webp"
+						media="(max-width: 768px)"/>
+					<!--
+					<source srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.1024.min.webp"
+						media="(max-width: 1024px)"/>
+					<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.1920.min.webp"
+						class="d-block w-100" alt="Ryoji Iwata" width="1920" height="889"/>
+					-->
+					<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.1024.min.webp"
+						class="d-block w-100" alt="Ryoji Iwata" width="1024" height="474"/>
+				</picture>
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg" class="d-block w-100" alt="..."/>
+				<picture>
+					<source srcset="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.480.min.webp"
+						media="(max-width: 480px)"/>
+					<source srcset="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.768.min.webp"
+						media="(max-width: 768px)"/>
+					<!--
+					<source srcset="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.1024.min.webp"
+						media="(max-width: 1024px)"/>
+					<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.1920.min.webp"
+						class="d-block w-100" alt="Nicholas Green" loading="lazy" width="1920" height="888"/>
+					-->
+					<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.1024.min.webp"
+						class="d-block w-100" alt="Nicholas Green" loading="lazy" width="1024" height="474"/>
+				</picture>
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg" class="d-block w-100" alt="..."/>
+				<picture>
+					<source srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.480.min.webp"
+						media="(max-width: 480px)"/>
+					<source srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.768.min.webp"
+						media="(max-width: 768px)"/>
+					<!--
+					<source srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.1024.min.webp"
+						media="(max-width: 1024px)"/>
+					<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.1920.min.webp"
+						class="d-block w-100" alt="Edward Cisneros" loading="lazy" width="1920" height="888"/>
+					-->
+					<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.1024.min.webp"
+						class="d-block w-100" alt="Edward Cisneros" loading="lazy" width="1024" height="474"/>
+				</picture>
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -57,7 +95,7 @@
 </div>
 <div id="about">
 	<div class="picture left">
-		<img src="./assets/images/nina.png"/>
+		<img src="./assets/images/nina.min.webp" width="292" height="292"/>
 	</div>
 	<div id="about-me">
 		<h3 class="about-me__title">A propos de moi</h3>
@@ -70,15 +108,15 @@
 	<h3 class="title">Portfolio</h3>
 	<div class="container py-3">
 		<div class="gallery" style="display: none">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg"/>
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"/>
+			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.min.webp" loading="lazy"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.min.webp" loading="lazy"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.min.webp" loading="lazy"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.min.webp" loading="lazy"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.min.webp" loading="lazy"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.min.webp" loading="lazy"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.min.webp" loading="lazy"/>
+			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.min.webp" loading="lazy"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.min.webp" loading="lazy"/>
 		</div>
 	</div>
 	<div class="quote">
@@ -150,9 +188,10 @@
 			</form>
 		</div>
 		<div class="picture right">
-			<img src="./assets/images/camera.png"/>
+			<img src="./assets/images/camera.min.webp" loading="lazy" width="404" height="404"/>
 		</div>
 	</div>
 </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 </html>
