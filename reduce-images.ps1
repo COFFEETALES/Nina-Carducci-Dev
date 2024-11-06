@@ -39,13 +39,13 @@ Get-ChildItem -LiteralPath . -Recurse -Include ('*.png', '*.jpg', '*.jpeg', '*.w
   }
   Else {
     If (3240 -le $Width) {
-      & cwebp -q 60 ($_.FullName) -resize ($Width / 6.0) 0 -o ($TargetName, '.min.webp' -join '')
-    }
-    ElseIf (2160 -le $Width) {
       & cwebp -q 60 ($_.FullName) -resize ($Width / 5.5) 0 -o ($TargetName, '.min.webp' -join '')
     }
-    ElseIf (1080 -le $Width) {
+    ElseIf (2160 -le $Width) {
       & cwebp -q 60 ($_.FullName) -resize ($Width / 5.0) 0 -o ($TargetName, '.min.webp' -join '')
+    }
+    ElseIf (1080 -le $Width) {
+      & cwebp -q 60 ($_.FullName) -resize ($Width / 4.5) 0 -o ($TargetName, '.min.webp' -join '')
     }
     Else {
       & cwebp -q 60 ($_.FullName) -o ($TargetName, '.min.webp' -join '')
@@ -65,3 +65,7 @@ Get-ChildItem -LiteralPath C:\dev\ocr\Nina-Carducci-Dev -Recurse -Filter ('*.min
 Get-ChildItem -LiteralPath C:\dev\ocr\Nina-Carducci-Dev -Recurse -Filter ('*.min.webp') | % {
   Remove-Item -LiteralPath $_.FullName
 }
+
+
+& magick identify -format '%f  width="%w" height="%h"\n' ('assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg')
+& cwebp -q 60 ('assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg') -resize (4480 / 7.0) 0 -o ('assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.min.webp')
